@@ -1,10 +1,12 @@
 module.exports = {
-  reactStrictMode: true,
   images: {
-    domains: ['restcountries.eu', 'media.graphcms.com'],
+    domains: ["images.unsplash.com", "upload.wikimedia.org", "i.ytimg.com", "media.graphcms.com"],
   },
-  env: {
-    mapbox_key:
-      'pk.eyJ1Ijoiem91cmR5Y29kZXMiLCJhIjoiY2tzNWl5eWJ2MTc3MDMxcGl2M245cmQ4byJ9.at9VGulqiw_x2k3CqXNWrQ',
+  webpack: (config, { isServer }) => {
+    if (isServer) {
+      require("./lib/siteMap");
+    }
+
+    return config;
   },
 };

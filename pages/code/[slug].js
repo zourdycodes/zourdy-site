@@ -12,15 +12,13 @@ export default function Blog({ mdxSource, frontMatter }) {
 
   return (
     <Wrapper>
-      <BlogLayout reading displayDate frontMatter={frontMatter}>
-        {content}
-      </BlogLayout>
+      <BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>
     </Wrapper>
   );
 }
 
 export async function getStaticPaths() {
-  const posts = await getFiles("post");
+  const posts = await getFiles("code");
 
   return {
     paths: posts.map((p) => ({
@@ -33,7 +31,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const post = await getFileBySlug("post", params.slug);
+  const post = await getFileBySlug("code", params.slug);
 
   return { props: post };
 }

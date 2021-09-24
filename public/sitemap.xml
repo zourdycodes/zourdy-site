@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://adamrichardson.dev/about</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/blog</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/code</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/gallery</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/privacy</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/services</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/videos</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/code/add-fathom-next-js</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/code/fetching-from-youtube</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/code/graphql-server-next-js</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/code/MDX-Blog-Code-Snippets</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/code/next-javascript-config</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/code/tailwindcss-dark-prose</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/code/uploading-images-to-s3-react</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev//privacy</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev//services</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/post/custom-tailwind-toast-component</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/post/fetching-youtube-channel-data</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/post/next-js-typescript-config</loc>
+  </url>
+
+  <url>
+    <loc>https://adamrichardson.dev/post/nextjs-data-fetching-methods-explained</loc>
+  </url>
+</urlset>
