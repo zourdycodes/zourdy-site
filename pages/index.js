@@ -16,7 +16,7 @@ export const getStaticProps = async () => {
 export default function Home({ data }) {
   console.log(data);
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div>
       <Head>
         <title>Muhammad Zourdy Blog's'</title>
         <link rel="icon" href="/favicon.ico" />
@@ -34,7 +34,7 @@ export default function Home({ data }) {
         })}
       </div>
 
-      <div>
+      <div className="mt-10">
         {data?.posts?.map((post) => {
           return (
             <div key={post.slug}>
