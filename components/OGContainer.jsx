@@ -7,7 +7,7 @@ export default function OGContainer(props) {
   // const router = useRouter();
 
   const meta = {
-    title: "Muhuammad Zourdy | Fullstack Developer & OSINT Investigator",
+    title: "Muhammad Zourdy | Software Engineer",
     description: `Front End Software Engineer`,
     type: "website",
     image: "https://adamrichardson.dev/images/defaultImage.png",
@@ -25,7 +25,7 @@ export default function OGContainer(props) {
         <meta property="og:type" content={meta.type} />
         <meta
           property="og:site_name"
-          content="Adam Richardson | Full Stack Developer & Course Creator"
+          content="Muhammad Zourdy | Front End Software Engineer & Web Security Pentester"
         />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />

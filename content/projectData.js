@@ -30,6 +30,16 @@ export const projectData = [
     github: "https://github.com/zourdycodes/MovHub",
   },
   {
+    title: "Amazon Clone",
+    description: `Amazon was designed and built for an educational purposes as well as to deep dive my front-end development skillset.this is my way to rewind my knowledge about programming, this project is very big and scalable with solid architecture`,
+    technologies:
+      "Next JS, Node JS, React, Redux, JavaScript, Tailwind CSS, GitHub, Vercel, Firebase, Cloud Firestore, Next Auth, Cart Functionality and Stripe Payments",
+    image: "/images/projects/amazon.png",
+    date_created: "January 2021",
+    link: "https://amazon-frontend-tawny.vercel.app/",
+    github: "https://github.com/zourdycodes/amazon-frontend",
+  },
+  {
     title: "Video Chat WebRTC",
     description: `This application was built using React (Custom Hooks, Context), WebRTC, Node JS, Express JS & Styled Components 💃. this is a fun full-stack project and I do it because i want to learn a new things, kinda a bit curious about WebRTC technology and sharping my front-end skillset and back-end skill as well`,
     technologies:
@@ -69,16 +79,6 @@ export const projectData = [
     date_created: "October 2020",
     link: "https://zourdy.netlify.app",
     github: "https://github.com/zourdycodes/portfolio-web",
-  },
-  {
-    title: "Amazon Clone",
-    description: `Amazon was designed and built for an educational purposes as well as to deep dive my front-end development skillset.this is my way to rewind my knowledge about programming, this project is very big and scalable with solid architecture`,
-    technologies:
-      "Next JS, Node JS, React, Redux, JavaScript, Tailwind CSS, GitHub, Vercel, Firebase, Cloud Firestore, Next Auth, Cart Functionality and Stripe Payments",
-    image: "/images/projects/amazon.png",
-    date_created: "January 2021",
-    link: "https://amazon-frontend-tawny.vercel.app/",
-    github: "https://github.com/zourdycodes/amazon-frontend",
   },
   {
     title: "Corona Virus Stats Tracker",

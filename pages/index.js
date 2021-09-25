@@ -9,7 +9,7 @@ import Wrapper from "../components/Wrapper";
 import { projectData } from "../content/projectData";
 import { getAllFilesFrontMatter } from "../lib/mdx";
 import { fetchData } from "../lib/utlis";
-import me from "../public/images/me.png";
+import me from "../public/images/ccp.png";
 
 export default function Home({ posts, snippets }) {
   return (
