@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
 
@@ -25,13 +26,15 @@ export default function Home({ posts, snippets }) {
             <Socials />
           </div>
           <p className="body-text mt-8 leading-10">
-            I'm a fullstack developer and course creator. I'm passionate about teaching real world
-            coding skills to aspiring developers. I run a website design agency and use the projects
-            that we're working on as inspiration for my courses/videos.
+            I'm a Front End Software Engineer & Web Security Penetration Tester. I am passionate
+            about software architecture and software security, throughout the years I've been
+            thinking that if we combined them we could create a secure and scalable big software
+            applications'
           </p>
           <div className="grid grid-cols-3 border-l-8 border-cyan-300 bg-gray-800 rounded-r-md py-4 mt-8 relative">
             <div className="col-span-3 sm:col-span-2 pl-4 text-2xl font-medium text-gray-400 leading-10 font-mono ">
-              The website is my place for blog posts, code snippets and Youtube content.
+              The website is my place for blog posts, code snippets and my life journey in Poland
+              🇵🇱.
             </div>
             <div className="absolute right-0 -top-2 hidden sm:flex">
               <Image
