@@ -1,1 +1,0 @@
-## Website for https://adamrichardson.dev

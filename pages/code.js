@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import { useState } from "react";
 
 import GradientHeadingText from "../components/GradientHeadingText";
@@ -18,8 +19,8 @@ export default function Code({ snippets }) {
         <div>
           <div>
             <h1 className="body-text">
-              Code Snippets: A place where I will drop my most frequently used code snippets for
-              easy access. Feel free to use any of the snippets in your own projects.
+              When I found something useful, I would love to share it with others through this
+              little piece of code snippets 💯.
             </h1>
           </div>
           <div className="my-4 pt-8 pb-3">

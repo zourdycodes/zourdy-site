@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+
 module.exports = {
   purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
@@ -28,7 +29,7 @@ module.exports = {
               },
               h1: { color: theme("colors.gray.100") },
               h2: { color: theme("colors.gray.100") },
-              h3: { color: theme("colors.gray.100") },
+              h3: { color: theme("colors.red.400") },
               h4: { color: theme("colors.gray.100") },
               code: { color: theme("colors.gray.100") },
               "a code": { color: theme("colors.gray.100") },
