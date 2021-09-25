@@ -6,7 +6,7 @@ import OGContainer from "./OGContainer";
 export default function BlogLayout({ children, frontMatter, reading, displayDate }) {
   return (
     <OGContainer
-      title={`${frontMatter.title} – Adam Richardson`}
+      title={`${frontMatter.title} – Muhammad Zourdy`}
       description={frontMatter.description}
       publishedAt={frontMatter.published ? new Date(frontMatter.published).toISOString() : null}
       image={
@@ -18,6 +18,7 @@ export default function BlogLayout({ children, frontMatter, reading, displayDate
         <h1 className="font-bold text-3xl md:text-5xl tracking-tight text-gray-100">
           {frontMatter.title}
         </h1>
+
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center w-full mt-4">
           <div className="flex items-center">
             <p className="text-sm text-gray-300">
@@ -33,6 +34,7 @@ export default function BlogLayout({ children, frontMatter, reading, displayDate
             <p className="text-sm text-gray-400 min-w-32">{frontMatter.readingTime.text}</p>
           )}
         </div>
+
         {frontMatter.image && (
           <div className="mt-4">
             <Image

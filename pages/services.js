@@ -1,6 +1,7 @@
 import MDXContentOnPage from "../components/MDXContentOnPage";
 import { getFileBySlug } from "../lib/mdx";
-export default function Privacy({ mdxSource, frontMatter }) {
+
+export default function Services({ mdxSource, frontMatter }) {
   return <MDXContentOnPage src={mdxSource} frontMatter={frontMatter} />;
 }
 

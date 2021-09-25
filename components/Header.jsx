@@ -10,7 +10,7 @@ export default function Header() {
     sm:px-6 md:px-8 max-w-3xl mx-auto">
       <div>
         <Link href="/">
-          <a className="text-gray-100 hover:text-cyan-300 text-3xl">Adam Richardson</a>
+          <a className="text-gray-100 hover:text-cyan-300 text-3xl">Muhammad Zourdy</a>
         </Link>
       </div>
       <nav className="text-gray-100 text-lg mt-4 sm:mt-0">
@@ -40,18 +40,6 @@ export default function Header() {
             </Link>
           </li>
           <li className="inline-flex ml-3">
-            <Link href="/code">
-              <a
-                className={`${
-                  pathname === "/code"
-                    ? "text-cyan-300 hover:text-cyan-400"
-                    : "text-gray-100 hover:text-cyan-300 "
-                }`}>
-                Snippets
-              </a>
-            </Link>
-          </li>
-          <li className="inline-flex ml-3">
             <Link href="/about">
               <a
                 className={`${
@@ -64,14 +52,14 @@ export default function Header() {
             </Link>
           </li>
           <li className="inline-flex ml-3">
-            <Link href="/videos">
+            <Link href="/code">
               <a
                 className={`${
-                  pathname === "/videos"
+                  pathname === "/code"
                     ? "text-cyan-300 hover:text-cyan-400"
                     : "text-gray-100 hover:text-cyan-300 "
                 }`}>
-                Videos
+                Snippets
               </a>
             </Link>
           </li>
