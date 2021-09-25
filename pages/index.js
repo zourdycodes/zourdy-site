@@ -25,7 +25,7 @@ export default function Home({ posts, snippets }) {
             </div>
             <Socials />
           </div>
-          <p className="body-text mt-8 leading-10">
+          <p className="body-text mt-8 leading-10 mb-52 sm:mb-0">
             I'm a Front End Software Engineer & Web Security Penetration Tester. I am passionate
             about software architecture and software security, throughout the years I've been
             thinking that if we combined them we could create a secure and scalable big software
@@ -36,7 +36,8 @@ export default function Home({ posts, snippets }) {
               The website is my place for blog posts, code snippets and my life journey in Poland
               🇵🇱.
             </div>
-            <div className="absolute right-0 -top-2 hidden sm:flex">
+
+            <div className="absolute right-20 -top-40 sm:flex sm:right-0 sm:-top-2">
               <Image
                 src={me}
                 height={170}
