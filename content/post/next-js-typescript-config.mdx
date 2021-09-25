@@ -3,18 +3,19 @@ title: 'Next.js, Typescript and ESLint Starter Configuration.'
 description: 'Follow the steps laid out in this article to have a Typescript
 and ESLint configured starter template.'
 category: 'development'
-author: 'Adam Richardson'
+author: 'Muhammad Zourdy'
 published: '2021-03-21'
 image: 'https://images.unsplash.com/photo-1561883088-039e53143d73?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw'
 ---
 
-This blog post will take you through configuring a new Next.js project, ready 
-to go with Typescript, ESlint and pre-commit checking with Husky. This is one 
+This blog post will take you through configuring a new Next.js project, ready
+to go with Typescript, ESlint and pre-commit checking with Husky. This is one
 way of ensuring all the code you're pushing is production ready. You can research
-any of these tools individually to find out exactly what we're doing, this post 
+any of these tools individually to find out exactly what we're doing, this post
 will focus on getting you setup and started with your project as quickly as possible.
 
 Start a fresh Next.js application.
+
 ```js
 npx create-next-app "Your project name here"
 ```
@@ -26,6 +27,7 @@ npm i typescript @types/react @types/node
 ```
 
 Setup your App.tsx
+
 ```jsx:/pages/_app.tsx
 import type { AppProps /*, AppContext */ } from 'next/app';
 
@@ -35,12 +37,15 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
 export default MyApp;
 ```
+
 Install ESLint and Prettier dev dependencies
+
 ```bash
 npm i -D --dev eslint @typescript-eslint/parser  @typescript-eslint/eslint-plugin eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y prettier eslint-plugin-prettier eslint-config-prettier  eslint-plugin-simple-import-sort husky
 ```
 
 Create an `eslintrc.js` file.
+
 ```js:.eslintrc.js
 module.exports = {
   root: true,
@@ -92,7 +97,9 @@ module.exports = {
   ],
 };
 ```
+
 Create a `.prettierrc` file.
+
 ```js:.prettierrc
 {
   "semi": true,
@@ -106,6 +113,7 @@ Create a `.prettierrc` file.
 ```
 
 Ensure you are fixing ESLint issues on editor save. `ctrl + shift + p` or `cmd + shift + p` to pull up your settings. Check these match.
+
 ```json
 {
   "editor.formatOnSave": false,
@@ -114,14 +122,17 @@ Ensure you are fixing ESLint issues on editor save. `ctrl + shift + p` or `cmd +
   }
 }
 ```
+
 We already installed Husky as a dev dependency, so lets initialise it.
 
 ```bash
 npx husky init
 ```
+
 This will create a pre-commit hook inside of the `.husky` folder. Remove this pre-commit example.
 
 Update `package.json` with the following scripts.
+
 ```json:package.json
   "scripts": {
     "dev": "next dev",
@@ -138,10 +149,4 @@ Add the pre-commit hook to Husky using our scripts.
 npx husky add .husky/pre-commit "npm run type-check && npm run lint ."
 ```
 
-You're now good to go. If you followed all the steps correctly you will have an awesome setup for working in a Next.js project. 
-
-
-
-
-
-
+You're now good to go. If you followed all the steps correctly you will have an awesome setup for working in a Next.js project.

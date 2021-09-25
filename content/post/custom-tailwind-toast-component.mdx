@@ -1,19 +1,21 @@
 ---
-title: 'React Toast Component and Custom Hook using Tailwindcss.'
-description: 'This blog post is about creating a custom toast component that works with tailwindcss.'
-category: 'development'
-author: 'Adam Richardson'
-published: '2021-03-20'
-image: 'https://images.unsplash.com/photo-1601750683192-72f3ab28ece9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8dG9hc3R8ZW58MHx8MHw'
+title: "React Toast Component and Custom Hook using Tailwindcss."
+description: "This blog post is about creating a custom toast component that works with tailwindcss."
+category: "development"
+author: "Muhammad Zourdy"
+published: "2021-03-20"
+image: "https://images.unsplash.com/photo-1601750683192-72f3ab28ece9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8dG9hc3R8ZW58MHx8MHw"
 ---
 
-<InformationBlob content="Toasts are basically just notifications. When you have a complex application or 
+<InformationBlob
+  content="Toasts are basically just notifications. When you have a complex application or 
 you need a lot of input from your users, giving them feedback on their actions
 is really important to their experience. Toasts are a great way to do this and 
-here is a simple integration into a React application." />
+here is a simple integration into a React application."
+/>
 
-The first thing you need to do is setup a Global Toast Context. We're using `useReducer` 
-with this context and you can see there is two actions, "ADD_TOAST" and "DELETE_TOAST". We 
+The first thing you need to do is setup a Global Toast Context. We're using `useReducer`
+with this context and you can see there is two actions, "ADD_TOAST" and "DELETE_TOAST". We
 can then easily add new toasts, and delete toasts from anywhere in our application. We're
 going to create a custom hook so that we don't have to use `dispatch()` directly.
 
@@ -62,14 +64,15 @@ export const useToastStateContext = () => useContext(ToastStateContext);
 export const useToastDispatchContext = () => useContext(ToastDispatchContext);
 ```
 
-We're now going to create two components. A Toast container that will be at 
-the root of our application so that we can display these anywhere. We're also going to 
+We're now going to create two components. A Toast container that will be at
+the root of our application so that we can display these anywhere. We're also going to
 create a Toast component which is what will be displayed inside the Toast Container.
 
 ### Toast Component
 
-As you can see, this component is taking in a type and a message and it's configured 
+As you can see, this component is taking in a type and a message and it's configured
 to take in two types right now. Success and Error.
+
 ```jsx:components/Toast.jsx
 import { useToastDispatchContext } from '../context/ToastContext';
 export default function Toast({ type, message, id }) {
@@ -208,7 +211,7 @@ export default function ToastContainer() {
 ### Bringing it together
 
 We're now going to bring all this logic together so that we can use the Toast notifications
-within our application. This is a Next.js application so we're adding our logic to the _app.js file.
+within our application. This is a Next.js application so we're adding our logic to the \_app.js file.
 
 ```jsx:pages/_app.js
 import 'tailwindcss/tailwind.css';
@@ -230,7 +233,7 @@ export default MyApp;
 
 ### The custom hook.
 
-The custom hook will be how we send off notifications. You can see we export a single function from the hook, 
+The custom hook will be how we send off notifications. You can see we export a single function from the hook,
 which is `toast()`. We can now import this anywhere within our application and send off toast notifications.
 
 ```js:hooks/useToast.js
@@ -258,7 +261,6 @@ export function useToast(delay) {
   return toast;
 }
 ```
-
 
 ### Using the toast
 

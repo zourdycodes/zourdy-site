@@ -1,36 +1,36 @@
 ---
-title: 'Fetching Youtube Channel Information and Videos using Youtube API.'
-description: 'Learn how to fetch Youtube channel information and all uploads with the Youtube API.'
-category: 'development'
-author: 'Adam Richardson'
-published: '2021-03-21'
-image: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw'
+title: "Fetching Youtube Channel Information and Videos using Youtube API."
+description: "Learn how to fetch Youtube channel information and all uploads with the Youtube API."
+category: "development"
+author: "Muhammad Zourdy"
+published: "2021-03-21"
+image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw"
 ---
 
 I've recently added Youtube information to the website you are on right now. Here's what that looks Like.
 
-<MDXImage src="/images/youtubestats.png" alt="Image of videos section of blog"/>
+<MDXImage src="/images/youtubestats.png" alt="Image of videos section of blog" />
 
 As you can see it's relatively simple and public information. The fact that it's public information
 means that we don't need to authenticate our account, we just need an API from Google.
 
-* Head over to `https://console.developers.google.com` and create a new application. 
-* Head to library and enable the Youtube API. 
-* Go to credentials and create a new API Key. 
-* Copy the API key that you need. 
+- Head over to `https://console.developers.google.com` and create a new application.
+- Head to library and enable the Youtube API.
+- Go to credentials and create a new API Key.
+- Copy the API key that you need.
 
-I'm using Next.js for this website so I've stored the API key in an environment variable in a 
+I'm using Next.js for this website so I've stored the API key in an environment variable in a
 file called `.env`. Whatever tech stack you're using, make sure this API key is not publicly accessible.
 
-In order to get the statistics and Youtube videos, we need to make two calls to the Youtube API. 
+In order to get the statistics and Youtube videos, we need to make two calls to the Youtube API.
 
-I've created a function which will use axios to handle the fetching. 
+I've created a function which will use axios to handle the fetching.
 
 ```bash
 npm i axios
 ```
 
-<br />  
+<br />{" "}
 
 ```js:lib/utils
 import axios from "axios";
@@ -51,14 +51,14 @@ Here are the two rather long URLs that we will use to fetch the data
 
 ```js
 const statisticsURL = `https://www.googleapis.com/youtube/v3/channels?part=statistics,contentDetails&id=${YOUTUBE_CHANNEL_ID}&key=${YOUTUBE_API_KEY}`;
-  const uploadsURL = `https://youtube.googleapis.com/youtube/v3/search?part=id%2Csnippet&channelId=${YOUTUBE_CHANNEL_ID}&type=video&maxResults=100&key=${YOUTUBE_API_KEY}`;
+const uploadsURL = `https://youtube.googleapis.com/youtube/v3/search?part=id%2Csnippet&channelId=${YOUTUBE_CHANNEL_ID}&type=video&maxResults=100&key=${YOUTUBE_API_KEY}`;
 ```
 
-While using Next.js, I'm choosing to statically generate the website for performance and SEO reasons. 
+While using Next.js, I'm choosing to statically generate the website for performance and SEO reasons.
 I could absolutely fetch this data on the client side, however I'm choosing to Incrementally refresh this data.
 
-We're going to use `getStaticProps()` in order to do this, while returning `revalidate: 86400` which is one day in seconds. 
-This means the data will be re-fetched every 24 hours so it's relatively up to date. I could make this shorter if I wanted it 
+We're going to use `getStaticProps()` in order to do this, while returning `revalidate: 86400` which is one day in seconds.
+This means the data will be re-fetched every 24 hours so it's relatively up to date. I could make this shorter if I wanted it
 to be more accurate at the time.
 
 ```js
@@ -77,21 +77,21 @@ export async function getStaticProps() {
 }
 ```
 
-The final thing we need to do within `getStaticProps()` is to actually make the data call. 
-We're making two data calls but I don't want to wait for one promise to resolve, before making the second 
-data call. This is really simple to achieve. 
+The final thing we need to do within `getStaticProps()` is to actually make the data call.
+We're making two data calls but I don't want to wait for one promise to resolve, before making the second
+data call. This is really simple to achieve.
 
 ```js
 async function getData() {
-    const stats = fetchData(statisticsURL);
-    const uploadData = fetchData(uploadsURL);
+  const stats = fetchData(statisticsURL);
+  const uploadData = fetchData(uploadsURL);
 
-    return {
-      stats: await stats,
-      uploadData: await uploadData,
-    };
-  }
-  const { stats, uploadData } = await getData();
+  return {
+    stats: await stats,
+    uploadData: await uploadData,
+  };
+}
+const { stats, uploadData } = await getData();
 ```
 
 It may look a little bit strange but both the stats and the uploadData data fetches will run in parallel
@@ -128,11 +128,10 @@ export async function getStaticProps() {
 }
 ```
 
-We now just need to complete our React component in order to display the data. 
+We now just need to complete our React component in order to display the data.
 I'm using Tailwindcss to style this website.
 
 ### Statistics display
-
 
 ```jsx:pages/video.js
 <YoutubeStats stats={stats} />
@@ -193,12 +192,10 @@ is because I've got a search input that will allow users of the site to search t
 Here's what that code looks like.
 
 ```jsx
-  const [searchValue, setSearchValue] = useState("");
-  const sortedVids = videos
-    .sort(
-      (a, b) => Number(new Date(b.snippet.publishedAt)) - Number(new Date(a.snippet.publishedAt)),
-    )
-    .filter((vid) => vid.snippet.title.toLowerCase().includes(searchValue.toLowerCase()));
+const [searchValue, setSearchValue] = useState("");
+const sortedVids = videos
+  .sort((a, b) => Number(new Date(b.snippet.publishedAt)) - Number(new Date(a.snippet.publishedAt)))
+  .filter((vid) => vid.snippet.title.toLowerCase().includes(searchValue.toLowerCase()));
 ```
 
 And here is the completed video page

@@ -35,79 +35,46 @@ export default function About() {
                 or even looking out another recent technology that could help me out at work. 🔰
               </p>
             </div>
+
             <div className="mt-24">
-              <GradientHeadingText text="Business" />
+              <GradientHeadingText text="Future Plan" />
             </div>
+
             <div className="prose prose-2xl prose-dark">
-              <p>
-                I run a development agency{" "}
-                <a href="https://zoeble.com" target="_blank" rel="noopener noreferrer">
-                  Zoeble Website Design and Development.
-                </a>
-              </p>
-              <p>
-                Lots of the projects that you see on my Youtube channel will be based from work that
-                we are doing in the agency.
-              </p>
+              <p className="underline">I currently building out SaaS application 🏴‍☠️</p>
             </div>
+
             <div className="mt-24">
-              <GradientHeadingText text="Stack" />
+              <GradientHeadingText text="Tech Stack" />
             </div>
-            <div className="prose prose-2xl prose-dark">
-              <h3 className="text-xl font-bold leading-7 text-gray-200 sm:text-2xl mt-2">
-                Frontend
-              </h3>
+            <div className="prose prose-2xl prose-dark mt-4">
               <p>
-                I've been working with React for a number of years now and will use it for pretty
-                much every project. Next.js is my favourite React framework and I use Tailwindcss
-                for styling websites. For smaller individual projects I will use Javascript over
-                Typescript.
+                Despite I really not use them as the same time quite often but I currently building
+                out a SaaS application which apparently will uses mist of the technology that I put
+                on to this line 🔰.
               </p>
-              <h3 className="text-xl font-bold leading-7 text-gray-200 sm:text-2xl mt-2">
-                Backend
-              </h3>
-              <p>
-                This one is dependant on the project and this changes quite a lot. For simple
-                projects I've used a lot of headless CMS's and I feel my favourite is Sanity. I
-                enjoy using Strapi and Keystone too.
-              </p>
-              <p>
-                For more complex integrations I would integrate with my own database via an API.
-                I've extensively used MySQL and Postgres, along with Mongodb and Firebase Firestore.
-                For data that isn't heavily relational I would probably opt for either Firebase or
-                Mongodb depending on complexiy. For relational data I would definitely go with
-                Postgres.
-              </p>
-            </div>
-            <div className="mt-24">
-              <GradientHeadingText text="Full Stack" />
-            </div>
-            <div className="prose prose-2xl prose-dark">
-              <p>This is what I will default to for larger applications.</p>
               <ul>
-                <li>Next.js</li>
-                <li>Typescript</li>
-                <p className="text-gray-300">
-                  I really love using Typescript on larger codebases/projects, especially when
-                  working with others.
-                </p>
-                <li>Tailwindcss</li>
-                <li>
+                <li className="underline">Next JS</li>
+                <li className="underline">Vue JS</li>
+                <li className="underline">Typescript</li>
+                <li className="underline">Golang</li>
+
+                <li className="underline">Tailwind CSS</li>
+                <li className="underline">SASS/LESS</li>
+                <li className="underline">
                   Express Server (Experimenting on solely using Next API routes on current project"
                 </li>
-                <p className="text-gray-300">
-                  The current project we're working on is built with Next.js API routes solely. This
-                  is actually working very well with next-auth and Prisma.
-                </p>
-                <li>Postgres (AWS)</li>
-                <p className="text-gray-300">Postgres DB hosted on AWS RDS.</p>
-                <li>AWS S3 - Image/Video Storage</li>
-                <li>Prisma - ORM</li>
-                <p className="text-gray-300">
+                <li className="underline">Node JS</li>
+
+                <li className="underline">PostgreSQL</li>
+                {/* <p className="text-gray-300">Postgres DB hosted on AWS RDS.</p> */}
+                <li className="underline">AWS S3 - Image/Video Storage</li>
+                <li className="underline">Prisma - ORM</li>
+                {/* <p className="text-gray-300">
                   Huge huge fan of Prisma and I'm confident using this in production projects now.
                   Developer experience is top notch for larger scale projects and being fully typed
                   is amazing for larger projects.
-                </p>
+                </p> */}
               </ul>
             </div>
           </div>
