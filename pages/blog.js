@@ -18,9 +18,9 @@ export default function Code({ posts }) {
         <div>
           <div>
             <h1 className="body-text">
-              Whenever I come across something useful, I like to write blog posts about it. This
-              helps me to learn and have a reference to come back to. Kind of like taking notes. You
-              may occasionally find something useful here.
+              Every information that could be useful for me and for others I always write it down on
+              the paper before publish it on this blog, also I write down a little piece of story
+              living in Poland.
             </h1>
           </div>
           <div className="py-8">

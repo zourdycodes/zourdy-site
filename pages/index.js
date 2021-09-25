@@ -29,7 +29,7 @@ export default function Home({ posts, snippets }) {
             I'm a Front End Software Engineer & Web Security Penetration Tester. I am passionate
             about software architecture and software security, throughout the years I've been
             thinking that if we combined them we could create a secure and scalable big software
-            applications'
+            applications.
           </p>
           <div className="grid grid-cols-3 border-l-8 border-cyan-300 bg-gray-800 rounded-r-md py-4 mt-8 relative">
             <div className="col-span-3 sm:col-span-2 pl-4 text-2xl font-medium text-gray-400 leading-10 font-mono ">
