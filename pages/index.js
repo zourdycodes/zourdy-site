@@ -6,11 +6,12 @@ import OGContainer from "../components/OGContainer";
 import PostListItem from "../components/PostListItem";
 import Socials from "../components/Socials";
 import Wrapper from "../components/Wrapper";
+import { projectData } from "../content/projectData";
 import { getAllFilesFrontMatter } from "../lib/mdx";
 import { fetchData } from "../lib/utlis";
 import me from "../public/images/me.png";
 
-export default function Home({ posts, snippets, videos }) {
+export default function Home({ posts, snippets }) {
   return (
     <Wrapper>
       <OGContainer description="Muhammad Zourdy - Front End Software Engineer and OSINT Investigator">
@@ -50,36 +51,35 @@ export default function Home({ posts, snippets, videos }) {
           </div>
           {posts && posts.map((post) => <PostListItem type="blog" key={post.slug} data={post} />)}
 
-          {videos && (
+          {projectData && (
             <div className="mt-40">
               <GradientHeadingText text="Highlight Project" />
             </div>
           )}
 
-          {videos &&
-            videos.map((video) => (
-              <>
-                <div
-                  key={video.id.videoId}
-                  className="grid grid-cols-3 items-center py-8 gap-4  border-b-2 border-gray-800">
-                  <div className="hidden sm:col-span-1 sm:flex sm:relative">
-                    <Image
-                      src={video.snippet.thumbnails.medium.url}
-                      width={320}
-                      height={180}
-                      alt={video.snippet.title}
-                      className="absolute rounded-md"
-                    />
-                  </div>
-                  <div className="col-span-3 sm:col-span-2">
-                    <a href={`https://youtube.com/watch?v=${video.id.videoId}`} target="none">
-                      <h2 className="title-text">{video.snippet.title}</h2>
-                    </a>
-                  </div>
+          {projectData.slice(0, 4).map((data, index) => (
+            <>
+              <div
+                key={index}
+                className="grid grid-cols-3 items-center py-8 gap-4  border-b-2 border-gray-800">
+                <div className="hidden sm:col-span-1 sm:flex sm:relative">
+                  <Image
+                    src={data.image}
+                    width={320}
+                    height={180}
+                    alt={data.title}
+                    className="absolute rounded-md"
+                  />
                 </div>
-                <p className="description-text">{video.snippet.description}</p>
-              </>
-            ))}
+                <div className="col-span-3 sm:col-span-2">
+                  <a href={data.link} target="none">
+                    <h2 className="title-text">{data.title}</h2>
+                    <p className="description-text">{data.description.substring(0, 100)} ...</p>
+                  </a>
+                </div>
+              </div>
+            </>
+          ))}
 
           <div className="mt-24 mb-16">
             <GradientHeadingText text="Code Snippets" />
