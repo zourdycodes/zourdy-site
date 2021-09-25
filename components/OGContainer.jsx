@@ -1,12 +1,14 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 
 export default function OGContainer(props) {
   const { children, ...customMeta } = props;
-  const router = useRouter();
+
+  // const router = useRouter();
+
   const meta = {
-    title: "Adam Richardson | Fullstack Developer & Course Creator",
-    description: `Full Stack Developer, Course creator.`,
+    title: "Muhuammad Zourdy | Fullstack Developer & OSINT Investigator",
+    description: `Front End Software Engineer`,
     type: "website",
     image: "https://adamrichardson.dev/images/defaultImage.png",
     ...customMeta,
@@ -18,8 +20,8 @@ export default function OGContainer(props) {
         <title>{meta.title}</title>
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
-        <meta property="og:url" content={`https://adamrichardson.dev${router.asPath}`} />
-        <link rel="canonical" href={`https://adamrichardson.dev${router.asPath}`} />
+        {/* <meta property="og:url" content={`https://adamrichardson.dev${router.asPath}`} />
+        <link rel="canonical" href={`https://adamrichardson.dev${router.asPath}`} /> */}
         <meta property="og:type" content={meta.type} />
         <meta
           property="og:site_name"

@@ -33,16 +33,19 @@ export default function Footer() {
 
         <div className="px-5 py-2">
           <a
-            href="https://www.youtube.com/channel/UC0QZp69ZABhoIr6Pp-lQEzA"
+            href="https://zourdydev.vercel.app"
             target="none"
             className="text-base text-gray-300 hover:text-cyan-300">
-            Youtube
+            Portfolio
           </a>
         </div>
       </nav>
       <p className="mt-4 text-center text-base text-gray-400">
-        &copy; {new Date().getFullYear()} Adam Richardson. All rights reserved.
+        &copy; {new Date().getFullYear()} Build by Adam Richardson Re-Design by Muhammad Zourdy. All
+        rights reserved.
       </p>
     </div>
   );
 }
+
+// ⚡😎💥🚀💷

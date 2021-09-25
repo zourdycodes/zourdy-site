@@ -13,10 +13,6 @@
   </url>
 
   <url>
-    <loc>https://adamrichardson.dev/gallery</loc>
-  </url>
-
-  <url>
     <loc>https://adamrichardson.dev</loc>
   </url>
 
@@ -33,6 +29,10 @@
   </url>
 
   <url>
+    <loc>https://adamrichardson.dev/code/MDX-Blog-Code-Snippets</loc>
+  </url>
+
+  <url>
     <loc>https://adamrichardson.dev/code/add-fathom-next-js</loc>
   </url>
 
@@ -45,11 +45,11 @@
   </url>
 
   <url>
-    <loc>https://adamrichardson.dev/code/MDX-Blog-Code-Snippets</loc>
+    <loc>https://adamrichardson.dev/code/next-javascript-config</loc>
   </url>
 
   <url>
-    <loc>https://adamrichardson.dev/code/next-javascript-config</loc>
+    <loc>https://adamrichardson.dev/code/prefetch-and-pagination-graphql-nextjs</loc>
   </url>
 
   <url>

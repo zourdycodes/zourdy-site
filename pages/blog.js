@@ -49,7 +49,7 @@ export default function Code({ posts }) {
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter("post");
-  console.log(posts);
+  console.log(posts, "disss!");
 
   return { props: { posts } };
 }
