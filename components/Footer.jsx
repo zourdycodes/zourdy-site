@@ -9,25 +9,25 @@ export default function Footer() {
       <nav className="mt-4 flex flex-wrap justify-center" aria-label="Footer">
         <div className="px-5 py-2">
           <Link href="/">
-            <a className="text-base text-gray-300 hover:text-cyan-300">Home</a>
+            <a className="text-base text-gray-300 hover:text-red-400">Home</a>
           </Link>
         </div>
 
         <div className="px-5 py-2">
           <Link href="/blog">
-            <a className="text-base text-gray-300 hover:text-cyan-300">Blog</a>
+            <a className="text-base text-gray-300 hover:text-red-400">Blog</a>
           </Link>
         </div>
 
         <div className="px-5 py-2">
           <Link href="/services">
-            <a className="text-base text-gray-300 hover:text-cyan-300">Services</a>
+            <a className="text-base text-gray-300 hover:text-red-400">Services</a>
           </Link>
         </div>
 
         <div className="px-5 py-2">
           <Link href="/privacy">
-            <a className="text-base text-gray-300 hover:text-cyan-300">Privacy</a>
+            <a className="text-base text-gray-300 hover:text-red-400">Privacy</a>
           </Link>
         </div>
 
@@ -35,17 +35,17 @@ export default function Footer() {
           <a
             href="https://zourdydev.vercel.app"
             target="none"
-            className="text-base text-gray-300 hover:text-cyan-300">
+            className="text-base text-gray-300 hover:text-red-400">
             Portfolio
           </a>
         </div>
       </nav>
       <p className="mt-4 text-center text-base text-gray-400">
-        &copy; {new Date().getFullYear()} Build by Adam Richardson Re-Design by Muhammad Zourdy. All
-        rights reserved.
+        &copy; {new Date().getFullYear()} Build by Muhammad Zourdy. All rights reserved.
       </p>
     </div>
   );
 }
 
 // ⚡😎💥🚀💷
+// Adam Richardson Re-Design by

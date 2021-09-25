@@ -10,7 +10,7 @@ export default function Header() {
     sm:px-6 md:px-8 max-w-3xl mx-auto">
       <div>
         <Link href="/">
-          <a className="text-gray-100 hover:text-cyan-300 text-3xl">Muhammad Zourdy</a>
+          <a className="text-gray-400 hover:text-red-400 text-3xl">Muhammad Zourdy</a>
         </Link>
       </div>
       <nav className="text-gray-100 text-lg mt-4 sm:mt-0">
@@ -20,8 +20,8 @@ export default function Header() {
               <a
                 className={`${
                   pathname === "/"
-                    ? "text-cyan-300 hover:text-cyan-400"
-                    : "text-gray-100 hover:text-cyan-300 "
+                    ? "text-red-400  hover:text-red-400"
+                    : "text-gray-100 hover:text-red-400 "
                 }`}>
                 Home
               </a>
@@ -32,8 +32,8 @@ export default function Header() {
               <a
                 className={`${
                   pathname === "/blog"
-                    ? "text-cyan-300 hover:text-cyan-400"
-                    : "text-gray-100 hover:text-cyan-300 "
+                    ? "text-red-400 hover:text-red-400"
+                    : "text-gray-100 hover:text-red-400 "
                 }`}>
                 Blog
               </a>
@@ -44,8 +44,8 @@ export default function Header() {
               <a
                 className={`${
                   pathname === "/about"
-                    ? "text-cyan-300 hover:text-cyan-400"
-                    : "text-gray-100 hover:text-cyan-300 "
+                    ? "text-red-400 hover:text-red-400"
+                    : "text-gray-100 hover:text-red-400 "
                 }`}>
                 About
               </a>
@@ -56,8 +56,8 @@ export default function Header() {
               <a
                 className={`${
                   pathname === "/code"
-                    ? "text-cyan-300 hover:text-cyan-400"
-                    : "text-gray-100 hover:text-cyan-300 "
+                    ? "text-red-400 hover:text-red-400"
+                    : "text-gray-100 hover:text-red-400 "
                 }`}>
                 Snippets
               </a>
