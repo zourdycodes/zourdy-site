@@ -13,14 +13,12 @@ import me from "../public/images/me.png";
 export default function Home({ posts, snippets, videos }) {
   return (
     <Wrapper>
-      <OGContainer
-        description="Adam Richardson - Fullstack website developer and course
-        creator from the UK">
+      <OGContainer description="Muhammad Zourdy - Front End Software Engineer and OSINT Investigator">
         <header className="">
           <div className="mt-4">
             <div className="flex items-center">
               <h1 className="text-6xl font-extrabold text-white tracking-tight sm:text-8xl">
-                Hi, I'm Adam Richardson.
+                Hi, I'm <span className="underline">Muhammad Zourdy</span>.
               </h1>
             </div>
             <Socials />
@@ -54,7 +52,7 @@ export default function Home({ posts, snippets, videos }) {
 
           {videos && (
             <div className="mt-40">
-              <GradientHeadingText text="Youtube Videos" />
+              <GradientHeadingText text="Highlight Project" />
             </div>
           )}
 
@@ -82,6 +80,7 @@ export default function Home({ posts, snippets, videos }) {
                 <p className="description-text">{video.snippet.description}</p>
               </>
             ))}
+
           <div className="mt-24 mb-16">
             <GradientHeadingText text="Code Snippets" />
             {snippets &&

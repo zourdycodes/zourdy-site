@@ -1,31 +1,38 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 /* eslint-disable react/no-unescaped-entities */
 import GradientHeadingText from "../components/GradientHeadingText";
 import OGContainer from "../components/OGContainer";
 import Wrapper from "../components/Wrapper";
+
 export default function About() {
   return (
     <Wrapper>
-      <OGContainer description="About Adam Richardson - Full Stack Developer and Content Creator">
+      <OGContainer description="About Muhammad Zourdy - Front End Software Engineer">
         <div className="mt-8 ">
           <h1 className="text-5xl font-extrabold text-white tracking-tight sm:text-6xl">
-            Hi, I'm Adam.{" "}
+            Hi, I'm Zourdy.{" "}
             <span role="img" aria-label="Hand Wave Emoji">
               ✋
             </span>
           </h1>
           <div className="text-2xl font-medium text-gray-300 mt-8 leading-10">
             <div className="prose prose-2xl prose-dark">
-              <p>I'm a self taught programmer with around 10 years of experience.</p>
+              <p>I'm a self taught programmer with around 3 years of experience 🤸‍♀️.</p>
               <p className="mt-4">
-                I recently launched this website and a Youtube channel which will be used to share
-                code and teach building full stack websites from real applications that we're
-                working on. Below you will see my tech stack which is what you can expect to see
-                courses on in the very near future.
+                I recently working as a front end software engineer 🎈 and also a community code
+                maintainer for graphical user interfaces development at epic games (voluntarily). I
+                also spending my spare time at the tracelabs.org helping out others that have been
+                lost their family members or relatives to find them in no-exchange 🕵️‍♂️
               </p>
               <p className="text-2xl font-medium text-gray-300 mt-8 leading-10">
-                I use other frameworks and tech for smaller side projects and experimenting for fun,
-                however this is my main stack and what I believe I can teach to a good level to help
-                aspiring developers.
+                When it comes to work-principe I always put a valuable first 💯 (what a value that
+                could bring a company that I worked for growth simultaneously) rather than what the
+                company could give me in-exchange.
+              </p>
+              <p className="text-2xl font-medium text-gray-300 mt-8 leading-10">
+                I also love 🧡 spending my time practicing martial-arts, playing a chess, Hiking a
+                mountain, Travelling and craving another skills like sharpening my other languages
+                or even looking out another recent technology that could help me out at work. 🔰
               </p>
             </div>
             <div className="mt-24">
@@ -109,3 +116,5 @@ export default function About() {
     </Wrapper>
   );
 }
+
+// ✈🏕🏴‍☠️

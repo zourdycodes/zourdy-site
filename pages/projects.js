@@ -5,17 +5,15 @@ import { useState } from "react";
 import GradientHeadingText from "../components/GradientHeadingText";
 import OGContainer from "../components/OGContainer";
 import Wrapper from "../components/Wrapper";
-import YoutubeStats from "../components/YoutubeStats";
-import { fetchData } from "../lib/utlis";
 
-export default function Code({ stats, videos }) {
+export default function Code({ videos }) {
   const [searchValue, setSearchValue] = useState("");
   const router = useRouter();
 
   if (router.isFallback) {
     return (
       <Wrapper>
-        <OGContainer description="Adam Richardson Youtube Vidoes. Statistics and Search.">
+        <OGContainer description="Muhammad Zourdy Personal Project's. Statistics and Search.">
           <h1>Loading...</h1>
         </OGContainer>
       </Wrapper>
@@ -36,7 +34,7 @@ export default function Code({ stats, videos }) {
           <div className="body-text">
             <h1>Find and search all of the videos on my Youtube Channel.</h1>
           </div>
-          {stats && <YoutubeStats stats={stats} />}
+
           <div className="my-4 py-8">
             <label htmlFor="videoSearch">
               <GradientHeadingText text="Search Youtube Videos" />
@@ -83,28 +81,4 @@ export default function Code({ stats, videos }) {
   );
 }
 
-export async function getStaticProps() {
-  const { YOUTUBE_API_KEY, YOUTUBE_CHANNEL_ID } = process.env;
-  const statisticsURL = `https://www.googleapis.com/youtube/v3/channels?part=statistics,contentDetails&id=${YOUTUBE_CHANNEL_ID}&key=${YOUTUBE_API_KEY}`;
-  const uploadsURL = `https://youtube.googleapis.com/youtube/v3/search?part=id%2Csnippet&channelId=${YOUTUBE_CHANNEL_ID}&type=video&maxResults=100&key=${YOUTUBE_API_KEY}`;
-
-  async function getData() {
-    const stats = fetchData(statisticsURL);
-    const uploadData = fetchData(uploadsURL);
-
-    return {
-      stats: await stats,
-      uploadData: await uploadData,
-    };
-  }
-
-  const { stats, uploadData } = await getData();
-
-  return {
-    revalidate: 86400,
-    props: {
-      stats: stats ? stats.items[0].statistics : null,
-      videos: uploadData ? uploadData.items : null,
-    },
-  };
-}
+export async function getStaticProps() {}
