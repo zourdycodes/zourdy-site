@@ -9,13 +9,13 @@ export default function About() {
     <Wrapper>
       <OGContainer description="About Muhammad Zourdy - Front End Software Engineer">
         <div className="mt-8 ">
-          <h1 className="text-5xl font-extrabold text-white tracking-tight sm:text-6xl">
+          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
             Hi, I'm Zourdy.{" "}
             <span role="img" aria-label="Hand Wave Emoji">
               ✋
             </span>
           </h1>
-          <div className="text-2xl font-medium text-gray-300 mt-8 leading-10">
+          <div className="mt-8 text-2xl font-medium text-gray-300 leading-10">
             <div className="prose prose-2xl prose-dark">
               <p>I'm a self taught programmer with around 3 years of experience 🤸‍♀️.</p>
               <p className="mt-4">
@@ -24,24 +24,25 @@ export default function About() {
                 also spending my spare time at the tracelabs.org helping out others that have been
                 lost their family members or relatives to find them in no-exchange 🕵️‍♂️
               </p>
-              <p className="text-2xl font-medium text-gray-300 mt-8 leading-10">
-                When it comes to work-principe I always put a valuable first 💯 (what a value that
-                could bring a company that I worked for growth simultaneously) rather than what the
-                company could give me in-exchange.
+              <p className="mt-8 text-2xl font-medium text-gray-300 leading-10">
+                When it comes to work-principe I always put a valuable first 💯 (what the exact
+                value that I could give in to bring a company that I worked for growth
+                simultaneously) rather than what the company could give me in-exchange.
               </p>
-              <p className="text-2xl font-medium text-gray-300 mt-8 leading-10">
+              <p className="mt-8 text-2xl font-medium text-gray-300 leading-10">
                 I also love 🧡 spending my time practicing martial-arts, playing a chess, Hiking a
-                mountain, Travelling and craving another skills like sharpening my other languages
-                or even looking out another recent technology that could help me out at work. 🔰
+                mountain, Travelling, reading a book and craving another skills like sharpening my
+                french languages or even looking out another recent technology that could help me
+                out at work. 🔰
               </p>
             </div>
 
             <div className="mt-24">
               <GradientHeadingText text="Future Plan" />
-            </div>
-
-            <div className="prose prose-2xl prose-dark">
-              <p className="underline">I currently building out SaaS application 🏴‍☠️</p>
+              <p className="underline">
+                I currently building out a SaaS application which in the near future I will launch
+                it as my first brushes building my own start-up company 🎯
+              </p>
             </div>
 
             <div className="mt-24">
@@ -49,9 +50,9 @@ export default function About() {
             </div>
             <div className="prose prose-2xl prose-dark mt-4">
               <p>
-                Despite I really not use them as the same time quite often but I currently building
-                out a SaaS application which apparently will uses mist of the technology that I put
-                on to this line 🔰.
+                Despite I really not use them as the same time on a daily basis but I currently
+                building out a SaaS application which apparently will uses most of the technology
+                that I put on to this line 🔰.
               </p>
               <ul>
                 <li className="underline">Next JS</li>
